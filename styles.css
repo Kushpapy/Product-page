@@ -1,0 +1,238 @@
+:root{
+    --white:hsl(0, 0%, 100%);
+    --text:hsl(228, 12%, 48%);
+    --pale:hsl(32,37%,92%);
+    --green:hsl(158, 36%, 37%);
+    --header-text: hsl(212, 21%, 14%);
+}
+
+*{
+    margin:0;
+}
+
+body{
+    background-color: var(--pale);
+}
+
+#header-img{
+width: 60px;
+object-fit: contain;
+}
+
+#nav-bar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    background-color: var(--white);
+    width: 100%;
+    padding: 10px;
+}
+
+.nav-links{
+    display: flex;
+    list-style: none;
+}
+
+.nav-links a{
+    color: var(--text);
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+.logo-container{
+    display: flex;
+    align-items: center;
+}
+
+.the-product{
+    font-size: 25px;
+    margin-left: 10px;
+    font-weight: 700;
+    font-family: "montserrat";
+}
+
+#email-section{
+    margin-top: 120px;
+}
+
+/* section::before{
+    content: " ";
+    display: block;
+    visibility: hidden;
+} */
+
+section{
+    margin: 40px 20px;
+    text-align: center;
+}
+
+input{
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid var(--green);
+}
+
+#submit{
+  background-color: var(--green);
+  color: var(--white);
+  cursor: pointer;  
+}
+
+h2{
+    margin-bottom: 10px;
+    font-family: "fraunces";
+}
+
+.icon{
+    color: var(--green);
+    margin-right: 30px;
+}
+
+#features{
+    text-align: left;
+    max-width: 800px;
+    margin: auto;
+}
+
+.feature{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    font-family: "montserrat";
+}
+
+#video{
+    width: 100%;
+}
+
+.product-image{
+    width: 100%;
+    height: 700px;
+    margin: auto;
+    border: 1px solid var(--text);
+    border-radius: 10px 10px 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.product-1{
+    background-image: url(https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781982171452/how-to-win-friends-and-influence-people-9781982171452_hr.jpg);
+}.product-2{
+background-image: url(https://m.media-amazon.com/images/I/81bsw6fnUiL._AC_UF1000,1000_QL80_.jpg);
+}.product-3{
+    background-image: url(https://m.media-amazon.com/images/I/91bYsX41DVL._AC_UF1000,1000_QL80_.jpg); 
+}
+
+.card{
+    width: 90%;
+    margin: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background-color: var(--white);
+}
+
+.inner-card{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+   justify-content: space-around;
+}
+
+.content{
+    font-family: "montserrat";
+    color: var(--text);
+    margin-bottom: 10px;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.main-price{
+    font-size: 30px;
+    margin-right: 15px;
+    font-family: "fraunces";
+    color: var(--green);
+}
+
+.old-price{
+    text-decoration: line-through;
+    color: var(--text);
+}
+
+.author{
+    font-family: "montserrat";
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--text);
+}
+
+.header{
+    margin: 10px 0;
+    color: var(--header-text);
+    font-family: "fraunces";
+}
+
+.add{
+   color:var(--white);
+   background-color: var(--green); 
+   font-family: "montserrat";
+   padding: 15px;
+   width: 100%;
+   font-weight: 700;
+   margin-bottom: 10px;
+   border-radius: 10px;
+   border: none;
+   cursor: pointer;
+}
+
+@media only screen and  (min-width: 600px){
+    #nav-bar{
+        flex-direction: row;
+    }
+}
+
+@media only screen and  (450px < width < 600px){
+    .card{
+        font-size: 0.85rem;
+    }
+
+    .product-image{
+      height: 400px;  
+    }
+}
+
+@media only screen and  (450px <= width){
+    .card{
+       display: flex;
+       max-width: 525px;
+    }
+
+    .inner-card{
+        width: 300px;
+        padding: 20px;
+    }
+
+    .product-image{
+      width: 400px; 
+      border-radius: 10px 0 0 10px; 
+    }
+}
+
+
+@media only screen and  (width >= 1000px){
+    .product-cards{
+       display: flex;
+       flex-wrap: wrap;
+    }
+
+    #video{
+        width: 70%;
+    }
+}
